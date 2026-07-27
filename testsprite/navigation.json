@@ -1,0 +1,43 @@
+{
+  "projectId": "3a77e41b-21a1-4932-8280-779da39de66e",
+  "type": "frontend",
+  "name": "Navigation Works",
+  "planSteps": [
+    {
+      "type": "action",
+      "action": "navigate",
+      "target": "https://clientgateway-three.vercel.app",
+      "description": "Navigate to landing page"
+    },
+    {
+      "type": "assertion",
+      "action": "assert_visible",
+      "target": "text=Platform",
+      "description": "Verify Platform nav item is visible"
+    },
+    {
+      "type": "assertion",
+      "action": "assert_visible",
+      "target": "text=Pricing",
+      "description": "Verify Pricing nav item is visible"
+    },
+    {
+      "type": "assertion",
+      "action": "assert_visible",
+      "target": "text=Sign in",
+      "description": "Verify Sign in link is visible"
+    },
+    {
+      "type": "action",
+      "action": "click",
+      "target": "text=Sign in",
+      "description": "Click Sign in to navigate to login"
+    },
+    {
+      "type": "assertion",
+      "action": "assert_url",
+      "expected": "/login",
+      "description": "Verify navigation to login page"
+    }
+  ]
+}

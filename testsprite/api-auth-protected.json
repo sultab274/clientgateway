@@ -1,0 +1,39 @@
+{
+  "projectId": "3a77e41b-21a1-4932-8280-779da39de66e",
+  "type": "backend",
+  "name": "Protected Routes Return Redirect",
+  "planSteps": [
+    {
+      "type": "action",
+      "action": "http_request",
+      "method": "GET",
+      "url": "https://clientgateway.vercel.app/dashboard",
+      "expected_status": 307,
+      "description": "Dashboard redirects unauthenticated users to login"
+    },
+    {
+      "type": "action",
+      "action": "http_request",
+      "method": "GET",
+      "url": "https://clientgateway.vercel.app/dashboard/invoices",
+      "expected_status": 307,
+      "description": "Invoices page redirects unauthenticated users"
+    },
+    {
+      "type": "action",
+      "action": "http_request",
+      "method": "GET",
+      "url": "https://clientgateway.vercel.app/dashboard/clients",
+      "expected_status": 307,
+      "description": "Clients page redirects unauthenticated users"
+    },
+    {
+      "type": "action",
+      "action": "http_request",
+      "method": "GET",
+      "url": "https://clientgateway.vercel.app/dashboard/payments",
+      "expected_status": 307,
+      "description": "Payments page redirects unauthenticated users"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "projectId": "3a77e41b-21a1-4932-8280-779da39de66e",
+  "type": "frontend",
+  "name": "User Login Flow",
+  "planSteps": [
+    {
+      "type": "action",
+      "action": "navigate",
+      "target": "https://clientgateway-three.vercel.app/login",
+      "description": "Navigate to login page"
+    },
+    {
+      "type": "assertion",
+      "action": "assert_visible",
+      "target": "h1",
+      "expected": "Welcome back",
+      "description": "Verify login page heading"
+    },
+    {
+      "type": "assertion",
+      "action": "assert_visible",
+      "target": "input[name='email']",
+      "description": "Verify email input is visible"
+    },
+    {
+      "type": "assertion",
+      "action": "assert_visible",
+      "target": "input[name='password']",
+      "description": "Verify password input is visible"
+    },
+    {
+      "type": "assertion",
+      "action": "assert_visible",
+      "target": "text=Continue with Google",
+      "description": "Verify Google OAuth button is visible"
+    }
+  ]
+}

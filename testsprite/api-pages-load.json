@@ -1,0 +1,47 @@
+{
+  "projectId": "3a77e41b-21a1-4932-8280-779da39de66e",
+  "type": "backend",
+  "name": "Public Pages Return 200",
+  "planSteps": [
+    {
+      "type": "action",
+      "action": "http_request",
+      "method": "GET",
+      "url": "https://clientgateway.vercel.app/",
+      "expected_status": 200,
+      "description": "Landing page returns 200"
+    },
+    {
+      "type": "action",
+      "action": "http_request",
+      "method": "GET",
+      "url": "https://clientgateway.vercel.app/login",
+      "expected_status": 200,
+      "description": "Login page returns 200"
+    },
+    {
+      "type": "action",
+      "action": "http_request",
+      "method": "GET",
+      "url": "https://clientgateway.vercel.app/signup",
+      "expected_status": 200,
+      "description": "Signup page returns 200"
+    },
+    {
+      "type": "action",
+      "action": "http_request",
+      "method": "GET",
+      "url": "https://clientgateway.vercel.app/pricing",
+      "expected_status": 200,
+      "description": "Pricing page returns 200"
+    },
+    {
+      "type": "action",
+      "action": "http_request",
+      "method": "GET",
+      "url": "https://clientgateway.vercel.app/solutions",
+      "expected_status": 200,
+      "description": "Solutions page returns 200"
+    }
+  ]
+}

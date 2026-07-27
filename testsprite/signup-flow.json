@@ -1,0 +1,47 @@
+{
+  "projectId": "3a77e41b-21a1-4932-8280-779da39de66e",
+  "type": "frontend",
+  "name": "User Signup Flow",
+  "planSteps": [
+    {
+      "type": "action",
+      "action": "navigate",
+      "target": "https://clientgateway-three.vercel.app/signup",
+      "description": "Navigate to signup page"
+    },
+    {
+      "type": "assertion",
+      "action": "assert_visible",
+      "target": "h1",
+      "expected": "Create your account",
+      "description": "Verify signup page heading"
+    },
+    {
+      "type": "action",
+      "action": "fill",
+      "target": "input[name='name']",
+      "value": "Test User",
+      "description": "Fill in the name field"
+    },
+    {
+      "type": "action",
+      "action": "fill",
+      "target": "input[name='email']",
+      "value": "test@example.com",
+      "description": "Fill in the email field"
+    },
+    {
+      "type": "action",
+      "action": "fill",
+      "target": "input[name='password']",
+      "value": "TestPass123",
+      "description": "Fill in the password field"
+    },
+    {
+      "type": "assertion",
+      "action": "assert_visible",
+      "target": "button[type='submit']",
+      "description": "Verify submit button is visible"
+    }
+  ]
+}

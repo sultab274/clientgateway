@@ -1,0 +1,38 @@
+{
+  "projectId": "3a77e41b-21a1-4932-8280-779da39de66e",
+  "type": "frontend",
+  "name": "Landing Page Loads Correctly",
+  "planSteps": [
+    {
+      "type": "action",
+      "action": "navigate",
+      "target": "https://clientgateway-three.vercel.app",
+      "description": "Navigate to the landing page"
+    },
+    {
+      "type": "assertion",
+      "action": "assert_visible",
+      "target": "h1",
+      "expected": "Control Cash Flow",
+      "description": "Verify the main headline is visible"
+    },
+    {
+      "type": "assertion",
+      "action": "assert_visible",
+      "target": "text=Get Started",
+      "description": "Verify the primary CTA button is visible"
+    },
+    {
+      "type": "assertion",
+      "action": "assert_visible",
+      "target": "text=Book Demo",
+      "description": "Verify the secondary CTA button is visible"
+    },
+    {
+      "type": "assertion",
+      "action": "assert_visible",
+      "target": "text=ClientGateway",
+      "description": "Verify the brand name is visible in the navbar"
+    }
+  ]
+}

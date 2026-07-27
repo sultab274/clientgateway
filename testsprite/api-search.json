@@ -1,0 +1,43 @@
+{
+  "projectId": "3a77e41b-21a1-4932-8280-779da39de66e",
+  "type": "backend",
+  "name": "Search API Returns Correct Results",
+  "planSteps": [
+    {
+      "type": "action",
+      "action": "http_request",
+      "method": "GET",
+      "url": "https://clientgateway.vercel.app/api/search?q=invoice",
+      "expected_status": 200,
+      "description": "Search for 'invoice' returns relevant results"
+    },
+    {
+      "type": "assertion",
+      "action": "assert_response_body_contains",
+      "expected": "Invoice",
+      "description": "Response contains Invoice results"
+    },
+    {
+      "type": "action",
+      "action": "http_request",
+      "method": "GET",
+      "url": "https://clientgateway.vercel.app/api/search?q=payment",
+      "expected_status": 200,
+      "description": "Search for 'payment' returns relevant results"
+    },
+    {
+      "type": "assertion",
+      "action": "assert_response_body_contains",
+      "expected": "Payment",
+      "description": "Response contains Payment results"
+    },
+    {
+      "type": "action",
+      "action": "http_request",
+      "method": "GET",
+      "url": "https://clientgateway.vercel.app/api/search?q=",
+      "expected_status": 200,
+      "description": "Empty search returns empty array"
+    }
+  ]
+}
